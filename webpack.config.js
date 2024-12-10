@@ -19,6 +19,7 @@ module.exports = {
         // open: true,
         liveReload: true,
     },
+
     plugins: [new HTMLWebpackPlugin({
         template: path.resolve(__dirname, "index.html"),
         favicon: path.resolve(__dirname, "src", "assets", "scissors.svg")
@@ -26,11 +27,13 @@ module.exports = {
     new CopyWebpackPlugin({
         patterns: [
             { 
-                from: path.resolve(__dirname, "src", "assets"), to: path.resolve(__dirname, "dist", "src", "assets")
+                from: path.resolve(__dirname, "src", "assets"),
+                to: path.resolve(__dirname, "dist", "src", "assets")
             },
         ]
     }),
     ],
+
     module: {
         rules: [
             {
