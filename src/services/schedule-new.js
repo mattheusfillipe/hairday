@@ -8,7 +8,7 @@ export async function scheduleNew({ id, name, when }) {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ id, name, when }),
+            body: JSON.stringify({ id: String(id), name, when }),
         })
 
         // Exibe mensagem de agendamento realizado.

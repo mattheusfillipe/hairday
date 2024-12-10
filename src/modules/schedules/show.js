@@ -5,7 +5,7 @@ const periodMorning = document.getElementById('period-morning')
 const periodAfternoon = document.getElementById('period-afternoon')
 const periodNight = document.getElementById('period-night')
 
-export function schedulesShow({ dailySchedules}) {
+export function schedulesShow({ dailySchedules }) {
     try {
         // Limpa as listas.
         periodMorning.innerHTML = ""
@@ -19,7 +19,7 @@ export function schedulesShow({ dailySchedules}) {
             const name = document.createElement('span')
 
             // Adiciona o ID do agendamento
-            item.setAttribute('id', schedule.id)
+            item.dataset.id = schedule.id
 
             time.textContent = dayjs(schedule.when).format("HH:mm")
             name.textContent = schedule.name
